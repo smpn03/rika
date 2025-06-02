@@ -1,0 +1,16 @@
+name: ceka
+
+on: push
+
+jobs:
+  check_cpu:
+    runs-on: buildjet-4vcpu-ubuntu-2204
+
+    steps:
+    - name: Checkout code
+      uses: actions/cache@v3
+
+    - name: Ceka
+      run: |
+        lscpu
+        
